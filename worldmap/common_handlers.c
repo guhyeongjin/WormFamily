@@ -1,7 +1,5 @@
 #include "common_handlers.h"
 
-// HOME_DIR 정의 (main에서 초기화되지 않으므로, 여기서 초기화 또는 main에서 초기화하고 extern으로 참조)
-// 여기서는 common_handlers.c에서 직접 초기화할게.
 const char *HOME_DIR = "/var/www/html/worldmap/executables"; // 실제 경로로 변경
 
 // 8자리 unique id 생성
@@ -63,7 +61,7 @@ void handle_generic_data(const char *header_num, const char *data, const char *c
     printf("[%s] Saved generic data for ID %s to %s.\n", header_num, unique_id, file_path);
 }
 
-// send_file_with_header_to_client 함수 구현 (더미, 실제 로직으로 대체 필요)
+// 파일전송함수 (더미, 수정 필요)
 int send_file_with_header_to_client(const char *file_path, int client_sock, const char *executable_name) {
     printf("[File Transfer] Simulating sending file %s to client socket %d (executable: %s)\n", file_path, client_sock, executable_name);
     // 실제 파일 전송 로직: 파일 열기, 파일 크기 확인, 헤더(파일 크기) 전송, 파일 데이터 전송
